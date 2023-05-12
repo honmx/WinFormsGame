@@ -1,0 +1,19 @@
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.csproj.AssemblyReference.cache
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms_game.Form1.resources
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms_game.GameScreen.resources
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms_game.Properties.Resources.resources
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.csproj.GenerateResource.cache
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.AssemblyInfoInputs.cache
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.AssemblyInfo.cs
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.csproj.CoreCompileInputs.cache
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\WinForms game.exe
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\WinForms game.deps.json
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\WinForms game.runtimeconfig.json
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\WinForms game.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\WinForms game.pdb
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\refint\WinForms game.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.pdb
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.genruntimeconfig.cache
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\ref\WinForms game.dll
