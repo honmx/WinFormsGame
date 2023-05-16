@@ -10,6 +10,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\ACR.png" />
+    <None Remove="Resources\Box.png" />
+    <None Remove="Resources\BoxBreak.png" />
+    <None Remove="Resources\BoxHit.png" />
+    <None Remove="Resources\DoubleJumpPlayer1.png" />
+    <None Remove="Resources\DoubleJumpPlayer2.png" />
+    <None Remove="Resources\FallPlayer1.png" />
+    <None Remove="Resources\FallPlayer2.png" />
+    <None Remove="Resources\Flame.png" />
+    <None Remove="Resources\GunFull.png" />
+    <None Remove="Resources\GunNoMagazine.png" />
+    <None Remove="Resources\JumpPlayer1.png" />
+    <None Remove="Resources\JumpPlayer2.png" />
+    <None Remove="Resources\Magazine.png" />
+    <None Remove="Resources\WallJumpPlayer1.png" />
+    <None Remove="Resources\WallJumpPlayer2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

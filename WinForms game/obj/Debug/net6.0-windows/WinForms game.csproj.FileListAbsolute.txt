@@ -17,3 +17,4 @@ C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.pdb
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.genruntimeconfig.cache
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\ref\WinForms game.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms_game.PlayAgainScreen.resources

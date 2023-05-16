@@ -16,10 +16,9 @@ namespace WinForms_game.Controllers
         public static void InitPlayers()
         {
             playersKeys = new List<List<Keys>>(
-                new List<Keys>[2]
+                new List<Keys>[1]
                 {
-                    new List<Keys>( new Keys[4] { Keys.W, Keys.D, Keys.S, Keys.A }),
-                    new List<Keys>( new Keys[4] { Keys.Up, Keys.Right, Keys.Down, Keys.Left }),
+                    new List<Keys>( new Keys[5] { Keys.W, Keys.D, Keys.S, Keys.A, Keys.Space })
                 }
             );
 

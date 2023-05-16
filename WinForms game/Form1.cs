@@ -20,7 +20,7 @@ namespace WinForms_game
             // 
             this.startGameButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.startGameButton.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.startGameButton.Location = new System.Drawing.Point(416, 317);
+            this.startGameButton.Location = new System.Drawing.Point(508, 316);
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(291, 74);
             this.startGameButton.TabIndex = 0;
@@ -34,7 +34,7 @@ namespace WinForms_game
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.title.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.title.Location = new System.Drawing.Point(341, 124);
+            this.title.Location = new System.Drawing.Point(423, 201);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(464, 78);
             this.title.TabIndex = 1;
@@ -55,9 +55,9 @@ namespace WinForms_game
         private void StartGameButton_Click_1(object sender, EventArgs e)
         {
             var gameScreen = new GameScreen();
+            gameScreen.Show();
 
             this.Hide();
-            gameScreen.Show();
         }
     }
 }

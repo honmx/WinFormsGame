@@ -14,66 +14,66 @@ namespace WinForms_game.Helpers
     {
         public Transform transform;
         public float dx;
-        double gravity;
-        double acceleration;
+        public float gravity;
+        public float acceleration;
+        public bool isMoving;
+        public bool isJumping;
+        public bool isGettingHit;
 
         public Physics(PointF position, Size size)
         {
             transform = new Transform(position, size);
-            gravity = 0;
-            acceleration = 0.4;
             dx = 0;
+            gravity = -30;
+            acceleration = 2f;
+            isMoving = false;
+            isJumping = false;
         }
 
         public void Run(int newDx)
         {
+            isMoving = true;
             dx = newDx;
             transform.position.X += dx;
         }
 
         public void Stop()
         {
+            isMoving = false;
             dx = 0;
         }
 
         public void Jump()
         {
+            gravity += acceleration;
 
+            if (gravity == 30)
+            {
+                gravity = -30;
+                isJumping = false;
+                return;
+            }
+
+            transform.position.Y += gravity;
         }
 
-        public bool IsCollidedByX(PointF objectPosition, int dx)
+        public bool IsCollidedByXWithLeftEdge(int dx)
         {
-            if (transform.position.X + dx < 25)
-            {
-                transform.position.X = 25;
-                return true;
-            }
+            return transform.position.X + dx < 300;
+        }
 
-            if (transform.position.X + transform.size.Width + dx > 1280 + 31)
-            {
-                transform.position.X = 1280 - transform.size.Width + 31;
-                return true;
-            }
+        public bool IsCollidedByXWithRightEdge(int dx)
+        {
+            return transform.position.X + transform.size.Width + dx > 1000;
+        }
 
-            if (
-                transform.position.X + 60 - 27 + dx > objectPosition.X && transform.position.X < objectPosition.X &&
-                transform.position.Y + 60 > objectPosition.Y && transform.position.Y < objectPosition.Y
-            )
-            {
-                transform.position.X = objectPosition.X - 60 + 27;
-                return true;
-            }
-
-            if (
-                transform.position.X + dx < objectPosition.X + 60 + 31 && transform.position.X > objectPosition.X &&
-                transform.position.Y + 60 > objectPosition.Y && transform.position.Y < objectPosition.Y
-            )
-            {
-                transform.position.X = objectPosition.X + 60 + 31;
-                return true;
-            }
-
-            return false;
+        public bool isCollided(PointF objectPosition, Size objectSize)
+        {
+            return
+                transform.position.X + transform.size.Width / 2 >= objectPosition.X &&
+                transform.position.X + transform.size.Width / 2 <= objectPosition.X + objectSize.Width &&
+                transform.position.Y + transform.size.Height / 2 >= objectPosition.Y &&
+                transform.position.Y + transform.size.Height / 2 <= objectPosition.Y + objectSize.Height;
         }
     }
 }

@@ -12,11 +12,10 @@ namespace WinForms_game.Entities
 {
     internal class Wall : IEntity
     {
-        Image sprite;
+        private Image sprite;
         public Transform transform;
-        public int sizeX;
-        public int sizeY;
-        public bool isTouchedByPlayer;
+        private int sizeX;
+        private int sizeY;
 
         public Wall(PointF position, Image image)
         {
@@ -24,7 +23,6 @@ namespace WinForms_game.Entities
             sizeX = 60;
             sizeY = 60;
             transform = new Transform(position, new Size(sizeX, sizeY));
-            isTouchedByPlayer = false;
         }
 
         public void DrawSprite(Graphics graphics)

@@ -63,9 +63,9 @@ namespace WinForms_game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Box {
+        internal static System.Drawing.Bitmap Bullet {
             get {
-                object obj = ResourceManager.GetObject("Box", resourceCulture);
+                object obj = ResourceManager.GetObject("Bullet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,59 +73,9 @@ namespace WinForms_game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BoxBreak {
+        internal static System.Drawing.Bitmap HealthPotion {
             get {
-                object obj = ResourceManager.GetObject("BoxBreak", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap BoxHit {
-            get {
-                object obj = ResourceManager.GetObject("BoxHit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DoubleJumpPlayer1 {
-            get {
-                object obj = ResourceManager.GetObject("DoubleJumpPlayer1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DoubleJumpPlayer2 {
-            get {
-                object obj = ResourceManager.GetObject("DoubleJumpPlayer2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FallPlayer1 {
-            get {
-                object obj = ResourceManager.GetObject("FallPlayer1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FallPlayer2 {
-            get {
-                object obj = ResourceManager.GetObject("FallPlayer2", resourceCulture);
+                object obj = ResourceManager.GetObject("HealthPotion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,19 +123,9 @@ namespace WinForms_game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap JumpPlayer1 {
+        internal static System.Drawing.Bitmap Pistol {
             get {
-                object obj = ResourceManager.GetObject("JumpPlayer1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap JumpPlayer2 {
-            get {
-                object obj = ResourceManager.GetObject("JumpPlayer2", resourceCulture);
+                object obj = ResourceManager.GetObject("Pistol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,29 +153,19 @@ namespace WinForms_game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StrengthPotion {
+            get {
+                object obj = ResourceManager.GetObject("StrengthPotion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wall {
             get {
                 object obj = ResourceManager.GetObject("Wall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WallJumpPlayer1 {
-            get {
-                object obj = ResourceManager.GetObject("WallJumpPlayer1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WallJumpPlayer2 {
-            get {
-                object obj = ResourceManager.GetObject("WallJumpPlayer2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

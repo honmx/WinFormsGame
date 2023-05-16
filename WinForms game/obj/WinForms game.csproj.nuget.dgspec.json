@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj": {}
+    "C:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj": {}
   },
   "projects": {
-    "c:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj": {
+    "C:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj",
+        "projectUniqueName": "C:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj",
         "projectName": "WinForms game",
-        "projectPath": "c:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj",
+        "projectPath": "C:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\WinForms game.csproj",
         "packagesPath": "C:\\Users\\maxkl\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\obj\\",
+        "outputPath": "C:\\Users\\maxkl\\source\\repos\\WinForms game\\WinForms game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxkl\\AppData\\Roaming\\NuGet\\NuGet.Config",
