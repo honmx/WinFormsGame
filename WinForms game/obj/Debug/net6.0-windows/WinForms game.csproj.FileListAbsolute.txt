@@ -18,3 +18,11 @@ C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.genruntimeconfig.cache
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\ref\WinForms game.dll
 C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms_game.PlayAgainScreen.resources
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\nunit.framework.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\obj\Debug\net6.0-windows\WinForms game.csproj.CopyComplete
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\NUnit3.TestAdapter.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\NUnit3.TestAdapter.pdb
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\nunit.engine.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\nunit.engine.api.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\nunit.engine.core.dll
+C:\Users\maxkl\source\repos\WinForms game\WinForms game\bin\Debug\net6.0-windows\testcentric.engine.metadata.dll

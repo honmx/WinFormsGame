@@ -134,6 +134,11 @@ namespace WinForms_game.Entities
             hp = 100;
         }
 
+        public int GetHp()
+        {
+            return hp;
+        }
+
         public void DrawSprite(Graphics graphics)
         {
             currentFrame++;

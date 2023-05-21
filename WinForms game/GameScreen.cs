@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WinForms_game.Controllers;
+﻿using WinForms_game.Controllers;
 using WinForms_game.Entities;
 using WinForms_game.Helpers;
 using WinForms_game.Interfaces;
@@ -51,97 +42,9 @@ namespace WinForms_game
 
         private void Update(object sender, EventArgs e)
         {
-            var enemies = EnemyController.GetEnemies();
-            var buffs = BuffController.GetBuffs();
-
-            foreach (var player in PlayerController.GetPlayers())
-            {
-                if (player.hp <= 0)
-                {
-                    var playAgainScreen = new PlayAgainScreen();
-                    playAgainScreen.Show();
-
-                    this.Close();
-                    timer.Stop();
-                }
-
-                if (player.physics.isMoving)
-                {
-                    player.Move((int)player.currentDirection * 15);
-                }
-
-                if (player.physics.isJumping)
-                {
-                    player.Jump();
-                }
-
-                for (var i = 0; i < enemies.Count; i++)
-                {
-                    var enemy = enemies[i];
-
-                    if (player.physics.isCollided(enemy.physics.transform.position, enemy.physics.transform.size))
-                    {
-                        player.GetHit();
-                    }
-                }
-
-                for (var i = 0; i <buffs.Count; i++)
-                {
-                    var buff = buffs[i];
-
-                    if (buff.physics.isCollided(player.physics.transform.position, player.physics.transform.size))
-                    {
-                        if (buff.type == "health")
-                        {
-                            player.Heal();
-                        }
-
-                        if (buff.type == "strength")
-                        {
-                            GameController.playerDamage = Math.Floor(GameController.playerDamage * 1.1);
-                        }
-
-                        BuffController.RemoveBuff(buff);
-                    }
-                }
-            }
-
-            if (enemies.Count < GameController.GetKills() / 20 + 2)
-            {
-                EnemyController.SpawnEnemy();
-            }
-
-            for (var i = 0; i < enemies.Count; i++)
-            {
-                var enemy = enemies[i];
-
-                if (enemy.hp <= 0)
-                {
-                    GameController.AddKill();
-                    EnemyController.KillEnemy(enemy);
-                    BuffController.SpawnBuffWithChance(25);
-                }
-
-                var bullets = BulletController.GetBullets();
-
-                for (var j = 0; j < bullets.Count; j++)
-                {
-                    var bullet = bullets[j];
-
-                    if (bullet.physics.transform.position.X < 0 || bullet.physics.transform.position.X > 1280)
-                    {
-                        BulletController.RemoveBullet(bullet);
-                    }
-
-                    if (bullet.physics.isCollided(enemy.physics.transform.position, enemy.physics.transform.size))
-                    {
-                        enemy.GetHit();
-                        BulletController.RemoveBullet(bullet);
-                    }
-                }
-
-                enemy.Move();
-            }
+            GameController.Update(this, timer);
+            PlayerController.Update(this, timer);
+            EnemyController.Update(this, timer);
 
             Invalidate();
         }
@@ -167,21 +70,21 @@ namespace WinForms_game
                 var player = players[i];
 
                 graphics.DrawString(
-                    "HP: " + player.hp,
+                    "HP: " + player.GetHp(),
                     new Font("Arial", 20),
                     new SolidBrush(Color.Black),
                     new PointF(10 + i * 100, 10)
                 );
 
                 graphics.DrawString(
-                    "Damage: " + GameController.playerDamage,
+                    "Damage: " + GameController.GetPlayerDamage(),
                     new Font("Arial", 20),
                     new SolidBrush(Color.Black),
                     new PointF(10 + i * 100, 50)
                 );
 
                 graphics.DrawString(
-                    "Kills: " + GameController.kills,
+                    "Kills: " + GameController.GetKills(),
                     new Font("Arial", 20),
                     new SolidBrush(Color.Black),
                     new PointF(10 + i * 100, 90)

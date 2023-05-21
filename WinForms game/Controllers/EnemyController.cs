@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WinForms_game.Entities;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_game.Controllers
 {
@@ -11,6 +12,7 @@ namespace WinForms_game.Controllers
     {
         public static List<Enemy> enemies;
         public static List<PointF> enemySpots;
+
         public static void InitEnemies()
         {
             enemies = new List<Enemy>();
@@ -20,6 +22,41 @@ namespace WinForms_game.Controllers
             {
                 var enemy = new Enemy(enemySpots[i]);
                 enemies.Add(enemy);
+            }
+        }
+
+        public static void Update(GameScreen gameScreen, Timer timer)
+        {
+            for (var i = 0; i < enemies.Count; i++)
+            {
+                var enemy = enemies[i];
+
+                if (enemy.hp <= 0)
+                {
+                    GameController.AddKill();
+                    KillEnemy(enemy);
+                    BuffController.SpawnBuffWithChance(25);
+                }
+
+                var bullets = BulletController.GetBullets();
+
+                for (var j = 0; j < bullets.Count; j++)
+                {
+                    var bullet = bullets[j];
+
+                    if (bullet.physics.transform.position.X < 0 || bullet.physics.transform.position.X > 1280)
+                    {
+                        BulletController.RemoveBullet(bullet);
+                    }
+
+                    if (bullet.physics.isCollided(enemy.physics.transform.position, enemy.physics.transform.size))
+                    {
+                        enemy.GetHit();
+                        BulletController.RemoveBullet(bullet);
+                    }
+                }
+
+                enemy.Move();
             }
         }
 

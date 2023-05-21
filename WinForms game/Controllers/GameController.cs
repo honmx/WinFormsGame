@@ -6,13 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using WinForms_game.Entities;
 using WinForms_game.Properties;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_game.Controllers
 {
     internal static class GameController
     {
-        public static int[,] map;
-        public static int kills;
+        private static int[,] map;
+        private static int kills;
         public static double playerDamage;
 
         public static void InitGame()
@@ -63,6 +64,16 @@ namespace WinForms_game.Controllers
             return positions;
         }
 
+        public static void Update(GameScreen gamescreen, Timer timer)
+        {
+            var enemies = EnemyController.GetEnemies();
+
+            if (enemies.Count < kills / 20 + 2)
+            {
+                EnemyController.SpawnEnemy();
+            }
+        }
+
         public static int[,] GetMap()
         {
             return map;
@@ -71,6 +82,11 @@ namespace WinForms_game.Controllers
         public static void AddKill()
         {
             kills++;
+        }
+
+        public static double GetPlayerDamage()
+        {
+            return playerDamage;
         }
 
         public static int GetKills()

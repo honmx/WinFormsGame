@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WinForms_game.Entities;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_game.Controllers
 {
@@ -33,6 +34,64 @@ namespace WinForms_game.Controllers
                     i + 1,
                     playersOnMap[i].X < 1280 / 2 ? 1 : -1
                 ));
+            }
+        }
+
+        public static void Update(GameScreen gameScreen, Timer timer)
+        {
+            var enemies = EnemyController.GetEnemies();
+            var buffs = BuffController.GetBuffs();
+
+            foreach (var player in players)
+            {
+                if (player.GetHp() <= 0)
+                {
+                    var playAgainScreen = new PlayAgainScreen();
+                    playAgainScreen.Show();
+
+                    gameScreen.Close();
+                    timer.Stop();
+                }
+
+                if (player.physics.isMoving)
+                {
+                    player.Move((int)player.currentDirection * 15);
+                }
+
+                if (player.physics.isJumping)
+                {
+                    player.Jump();
+                }
+
+                for (var i = 0; i < enemies.Count; i++)
+                {
+                    var enemy = enemies[i];
+
+                    if (player.physics.isCollided(enemy.physics.transform.position, enemy.physics.transform.size))
+                    {
+                        player.GetHit();
+                    }
+                }
+
+                for (var i = 0; i < buffs.Count; i++)
+                {
+                    var buff = buffs[i];
+
+                    if (buff.physics.isCollided(player.physics.transform.position, player.physics.transform.size))
+                    {
+                        if (buff.type == "health")
+                        {
+                            player.Heal();
+                        }
+
+                        if (buff.type == "strength")
+                        {
+                            GameController.playerDamage = Math.Floor(GameController.playerDamage * 1.1);
+                        }
+
+                        BuffController.RemoveBuff(buff);
+                    }
+                }
             }
         }
 
